@@ -3,7 +3,7 @@
  *
  * @version: 0.0.0
  * @author: Nicholas McCready
- * @date: Thu Jul 17 2014 18:23:18 GMT-0400 (EDT)
+ * @date: Thu Jul 17 2014 18:24:27 GMT-0400 (EDT)
  * @license: MIT
  */(function() {
   var __hasProp = {}.hasOwnProperty,
