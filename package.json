@@ -6,6 +6,11 @@
   "scripts": {
     "test": "cgulp spec"
   },
+  "homepage": "https://github.com/nmccready/ns2",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nmccready/ns2.git"
+  },
   "author": "Nicholas McCready",
   "license": "MIT",
   "dependencies": {
