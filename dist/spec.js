@@ -3,7 +3,7 @@
  *
  * @version: 1.0.0
  * @author: Nicholas McCready
- * @date: Fri Jul 18 2014 10:35:14 GMT-0400 (EDT)
+ * @date: Fri Jul 18 2014 11:05:17 GMT-0400 (EDT)
  * @license: MIT
  */
 isNode =

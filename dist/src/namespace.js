@@ -2,6 +2,8 @@
 /*
     Created to make namespaces safely without stomping and crushing other namespaces and or objects
     (taken/modified from stack overflow)
+
+    Recursive walk the namespaces and create objects underneath each if it is undefined
     author: Nick McCready
  */
 

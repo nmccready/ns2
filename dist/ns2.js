@@ -3,7 +3,7 @@
  *
  * @version: 1.0.0
  * @author: Nicholas McCready
- * @date: Fri Jul 18 2014 10:35:14 GMT-0400 (EDT)
+ * @date: Fri Jul 18 2014 11:05:17 GMT-0400 (EDT)
  * @license: MIT
  */
 isNode =
@@ -30,8 +30,7 @@ isNode =
 }).call(this);
 
 (function() {
-  var BaseObject, baseObjectKeywords,
-    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+  var BaseObject, baseObjectKeywords;
 
   baseObjectKeywords = ['extended', 'included'];
 
@@ -39,13 +38,14 @@ isNode =
     function BaseObject() {}
 
     BaseObject.extend = function(obj) {
-      var key, value, _ref;
-      for (key in obj) {
-        value = obj[key];
-        if (__indexOf.call(baseObjectKeywords, key) < 0) {
-          this[key] = value;
-        }
-      }
+      var _ref;
+      Object.keys(obj).forEach((function(_this) {
+        return function(key) {
+          if (!baseObjectKeywords[key]) {
+            return _this[key] = obj[key];
+          }
+        };
+      })(this));
       if ((_ref = obj.extended) != null) {
         _ref.apply(0);
       }
@@ -53,20 +53,16 @@ isNode =
     };
 
     BaseObject.include = function(obj) {
-      var key, value, _ref, _results;
-      _results = [];
-      for (key in obj) {
-        value = obj[key];
-        if (!(__indexOf.call(baseObjectKeywords, key) < 0)) {
-          continue;
-        }
-        this.prototype[key] = value;
-        if ((_ref = obj.included) != null) {
-          _ref.apply(0);
-        }
-        _results.push(this);
-      }
-      return _results;
+      Object.keys(obj).forEach((function(_this) {
+        return function(key) {
+          var _ref;
+          if (!baseObjectKeywords[key]) {
+            _this.prototype[key] = obj[key];
+            return (_ref = obj.included) != null ? _ref.apply(0) : void 0;
+          }
+        };
+      })(this));
+      return this;
     };
 
     return BaseObject;
@@ -79,6 +75,8 @@ isNode =
 /*
     Created to make namespaces safely without stomping and crushing other namespaces and or objects
     (taken/modified from stack overflow)
+
+    Recursive walk the namespaces and create objects underneath each if it is undefined
     author: Nick McCready
  */
 
