@@ -1,9 +1,9 @@
 /**
  *  ns2
  *
- * @version: 0.0.0
+ * @version: 1.0.0
  * @author: Nicholas McCready
- * @date: Fri Jul 18 2014 10:21:48 GMT-0400 (EDT)
+ * @date: Fri Jul 18 2014 10:35:14 GMT-0400 (EDT)
  * @license: MIT
  */
 isNode =
@@ -26,14 +26,6 @@ isNode =
   _global.getGlobal = getGlobal;
 
   _global.isNode = isNode;
-
-  if (isNode) {
-    _global._ = require('lodash');
-  }
-
-  if (!_) {
-    throw new Error('lodash or underscore undefined');
-  }
 
 }).call(this);
 

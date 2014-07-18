@@ -1,9 +1,9 @@
 /**
  *  ns2
  *
- * @version: 0.0.0
+ * @version: 1.0.0
  * @author: Nicholas McCready
- * @date: Fri Jul 18 2014 10:21:48 GMT-0400 (EDT)
+ * @date: Fri Jul 18 2014 10:35:14 GMT-0400 (EDT)
  * @license: MIT
  */
 isNode =
@@ -18,12 +18,18 @@ isNode =
     global.should = require('should');
     global.namespace = proj.namespace;
     global.BaseObject = proj.BaseObject;
+    global._ = require('lodash');
   }
 
   describe('sanity', function() {
-    it('should.js should exist', function() {
+    it('should.js exist', function() {
       if (!should) {
         throw new Error();
+      }
+    });
+    it('lodash exists', function() {
+      if (!_) {
+        throw new Error('lodash or underscore undefined');
       }
     });
     return it('ns2 is loaded', function() {

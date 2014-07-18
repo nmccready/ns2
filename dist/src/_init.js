@@ -15,12 +15,4 @@
 
   _global.isNode = isNode;
 
-  if (isNode) {
-    _global._ = require('lodash');
-  }
-
-  if (!_) {
-    throw new Error('lodash or underscore undefined');
-  }
-
 }).call(this);

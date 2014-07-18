@@ -87,7 +87,7 @@ module.exports = (_, gulp, coffee, concat, rename, log, clean, gulpif, coffeelin
   gulp.task "serve_fast", ["serve_build", "open"]
 
   gulp.task "default", ["clean"], ->
-    gulp.start "scripts", "watch", "spec"
+    gulp.start "scripts", "watch", "spec", "karma"
 
   gulp.task "serve", ["clean"], ->
     gulp.start "default", "serve_fast"
@@ -96,7 +96,7 @@ module.exports = (_, gulp, coffee, concat, rename, log, clean, gulpif, coffeelin
 
   thingsToWatch = ->
     gulp.watch "src/**/*", ["default"]
-    gulp.watch "spec/**/*", ["spec_build", "spec"]
+    gulp.watch "spec/**/*", ["spec_build", "spec", "karma"]
 
   gulp.task "watch", ["scripts"], ->
     thingsToWatch()

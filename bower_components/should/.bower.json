@@ -10,6 +10,5 @@
   },
   "_source": "git://github.com/visionmedia/should.js.git",
   "_target": "~3.3.1",
-  "_originalSource": "should",
-  "_direct": true
+  "_originalSource": "should"
 }
