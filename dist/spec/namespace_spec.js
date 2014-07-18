@@ -1,11 +1,4 @@
-/**
- *  ns2
- *
- * @version: 0.0.0
- * @author: Nicholas McCready
- * @date: Thu Jul 17 2014 18:24:27 GMT-0400 (EDT)
- * @license: MIT
- */(function() {
+(function() {
   describe('namespace creation tests', function() {
     beforeEach(function() {
       return namespace('test', function() {

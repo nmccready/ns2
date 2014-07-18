@@ -1,11 +1,4 @@
-/**
- *  ns2
- *
- * @version: 0.0.0
- * @author: Nicholas McCready
- * @date: Thu Jul 17 2014 18:23:18 GMT-0400 (EDT)
- * @license: MIT
- */(function() {
+(function() {
   var BaseObject, baseObjectKeywords,
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 

@@ -12,7 +12,6 @@ getGlobal().namespace = (names, fn = ()->) ->
   else
     fn.call space
 
-isNode = require 'isnode'
 if isNode
   module.exports =
     namespace: namespace

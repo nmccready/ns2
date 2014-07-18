@@ -1,0 +1,35 @@
+{
+  "name": "ns2",
+  "version": "1.0.0",
+  "homepage": "https://github.com/nmccready/ns2",
+  "authors": [
+    "Nick McCready <nmccready@gmail.com>"
+  ],
+  "description": "simple namespacing w/ ruby(like) @extend and @include for CoffeeScript (useful for JS too!)",
+  "main": "'dist/ns2.js'",
+  "test": "karma start",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "'namespace",
+    "ns'"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components",
+    "test",
+    "tests",
+    "spec"
+  ],
+  "devDependencies": {
+    "should": "~3.3.1"
+  },
+  "dependencies": {
+    "lodash": "~2.4.1"
+  }
+}

@@ -55,4 +55,4 @@ describe 'BaseObject', ->
       p.should.be.ok
       p2.should.be.ok
       p.name.should.be.eql 'john'
-      p2.name?.should.not.be.ok
+      p2.name?.should.not

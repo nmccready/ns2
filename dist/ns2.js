@@ -3,12 +3,15 @@
  *
  * @version: 0.0.0
  * @author: Nicholas McCready
- * @date: Thu Jul 17 2014 18:23:18 GMT-0400 (EDT)
+ * @date: Fri Jul 18 2014 10:21:48 GMT-0400 (EDT)
  * @license: MIT
- */(function() {
-  var getGlobal, isNode, _global;
+ */
+isNode =
+  !(typeof window !== "undefined" && window !== null);
 
-  isNode = require('isnode');
+
+(function() {
+  var getGlobal, _global;
 
   getGlobal = function() {
     if (isNode) {
@@ -22,6 +25,8 @@
 
   _global.getGlobal = getGlobal;
 
+  _global.isNode = isNode;
+
   if (isNode) {
     _global._ = require('lodash');
   }
@@ -32,14 +37,7 @@
 
 }).call(this);
 
-/**
- *  ns2
- *
- * @version: 0.0.0
- * @author: Nicholas McCready
- * @date: Thu Jul 17 2014 18:23:18 GMT-0400 (EDT)
- * @license: MIT
- */(function() {
+(function() {
   var BaseObject, baseObjectKeywords,
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
@@ -85,14 +83,7 @@
 
 }).call(this);
 
-/**
- *  ns2
- *
- * @version: 0.0.0
- * @author: Nicholas McCready
- * @date: Thu Jul 17 2014 18:23:18 GMT-0400 (EDT)
- * @license: MIT
- */
+
 /*
     Created to make namespaces safely without stomping and crushing other namespaces and or objects
     (taken/modified from stack overflow)
@@ -100,8 +91,6 @@
  */
 
 (function() {
-  var isNode;
-
   getGlobal().namespace = function(names, fn) {
     var space, _name;
     if (fn == null) {
@@ -118,8 +107,6 @@
       return fn.call(space);
     }
   };
-
-  isNode = require('isnode');
 
   if (isNode) {
     module.exports = {

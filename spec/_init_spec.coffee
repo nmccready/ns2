@@ -1,5 +1,3 @@
-isNode = require 'isnode'
-
 if isNode
   proj = require './ns2'
   global.should = require 'should'
@@ -7,7 +5,8 @@ if isNode
   global.BaseObject = proj.BaseObject
 
 #deps be loaded by the browser or by node
-throw new Error 'should' unless should
-throw new Error 'ns2 undefined' unless proj
-
-console.log proj
+describe 'sanity', ->
+  it 'should.js should exist', ->
+    throw new Error() unless should
+  it 'ns2 is loaded', ->
+    throw new Error() if not getGlobal().namespace || not getGlobal().BaseObject
