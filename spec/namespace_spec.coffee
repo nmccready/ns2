@@ -35,7 +35,6 @@ describe 'namespace creation tests', ->
 
       namespace 'one.two.crap', ->
         @subObj = {}
-
       one.two.crap.test.should.be.ok
       one.two.crap.test().should.be.eql 'crap'
       one.two.crap.subObj.should.be.ok
