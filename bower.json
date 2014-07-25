@@ -1,6 +1,6 @@
 {
   "name": "ns2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/nmccready/ns2",
   "authors": [
     "Nick McCready <nmccready@gmail.com>"
@@ -26,8 +26,10 @@
     "tests",
     "spec"
   ],
+  "dependencies": {
+    "lodash": "^2.4.1"
+  },
   "devDependencies": {
-    "lodash": "^2.4.1",
     "should": "~3.3.1"
   }
 }

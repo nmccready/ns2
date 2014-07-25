@@ -5,8 +5,9 @@ describe 'namespace creation tests', ->
       @open = hidden
 
   afterEach ->
-    getGlobal().test = undefined
-    delete getGlobal().test
+    console.log test
+    test = undefined
+    test
 
   it 'has no hidden', ->
     test.hidden?.should.not.be.ok

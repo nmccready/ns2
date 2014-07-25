@@ -1,6 +1,6 @@
 baseObjectKeywords = ['extended', 'included']
 
-getGlobal().BaseObject = class BaseObject
+BaseObject = class BaseObject
   @extend: (obj) ->
     Object.keys(obj).forEach (key) =>
       unless baseObjectKeywords[key]

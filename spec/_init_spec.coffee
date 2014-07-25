@@ -1,9 +1,9 @@
 if isNode
   proj = require './ns2'
-  global.should = require 'should'
-  global.namespace = proj.namespace
-  global.BaseObject = proj.BaseObject
-  global._ = require 'lodash'
+  should = require 'should'
+  namespace = proj.namespace
+  BaseObject = proj.BaseObject
+  _ = require 'lodash'
 
 #deps be loaded by the browser or by node
 describe 'sanity', ->
@@ -14,4 +14,4 @@ describe 'sanity', ->
     throw new Error 'lodash or underscore undefined' unless _
 
   it 'ns2 is loaded', ->
-    throw new Error() if not getGlobal().namespace || not getGlobal().BaseObject
+    throw new Error() if not namespace || not BaseObject

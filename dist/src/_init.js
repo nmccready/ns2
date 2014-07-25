@@ -1,18 +1,9 @@
-(function() {
-  var getGlobal, _global;
+var getGlobal;
 
-  getGlobal = function() {
-    if (isNode) {
-      return global;
-    } else {
-      return window;
-    }
-  };
-
-  _global = getGlobal();
-
-  _global.getGlobal = getGlobal;
-
-  _global.isNode = isNode;
-
-}).call(this);
+getGlobal = function() {
+  if (isNode) {
+    return global;
+  } else {
+    return window;
+  }
+};
