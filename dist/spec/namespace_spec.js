@@ -8,9 +8,7 @@ describe('namespace creation tests', function() {
   });
   afterEach(function() {
     var test;
-    console.log(test);
-    test = void 0;
-    return test;
+    return test = void 0;
   });
   it('has no hidden', function() {
     var _ref;

@@ -1,13 +1,12 @@
 describe 'namespace creation tests', ->
   beforeEach ->
+#    @namespace = namespace
     namespace 'test', ->
       hidden = 10
       @open = hidden
 
   afterEach ->
-    console.log test
     test = undefined
-    test
 
   it 'has no hidden', ->
     test.hidden?.should.not.be.ok
@@ -35,6 +34,7 @@ describe 'namespace creation tests', ->
 
       namespace 'one.two.crap', ->
         @subObj = {}
+
       one.two.crap.test.should.be.ok
       one.two.crap.test().should.be.eql 'crap'
       one.two.crap.subObj.should.be.ok

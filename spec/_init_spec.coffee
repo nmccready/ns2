@@ -3,6 +3,7 @@ if isNode
   should = require 'should'
   namespace = proj.namespace
   BaseObject = proj.BaseObject
+  getGlobal = proj.getGlobal
   _ = require 'lodash'
 
 #deps be loaded by the browser or by node

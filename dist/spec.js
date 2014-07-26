@@ -3,20 +3,21 @@
  *
  * @version: 1.0.1
  * @author: Nicholas McCready
- * @date: Fri Jul 25 2014 16:31:18 GMT-0400 (EDT)
+ * @date: Sat Jul 26 2014 09:50:11 GMT-0400 (EDT)
  * @license: MIT
  */
 isNode =
   !(typeof window !== "undefined" && window !== null);
 
 
-var BaseObject, namespace, proj, should, _;
+var BaseObject, getGlobal, namespace, proj, should, _;
 
 if (isNode) {
   proj = require('./ns2');
   should = require('should');
   namespace = proj.namespace;
   BaseObject = proj.BaseObject;
+  getGlobal = proj.getGlobal;
   _ = require('lodash');
 }
 
@@ -127,9 +128,7 @@ describe('namespace creation tests', function() {
   });
   afterEach(function() {
     var test;
-    console.log(test);
-    test = void 0;
-    return test;
+    return test = void 0;
   });
   it('has no hidden', function() {
     var _ref;

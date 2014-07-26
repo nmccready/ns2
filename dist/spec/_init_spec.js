@@ -1,10 +1,11 @@
-var BaseObject, namespace, proj, should, _;
+var BaseObject, getGlobal, namespace, proj, should, _;
 
 if (isNode) {
   proj = require('./ns2');
   should = require('should');
   namespace = proj.namespace;
   BaseObject = proj.BaseObject;
+  getGlobal = proj.getGlobal;
   _ = require('lodash');
 }
 

@@ -3,7 +3,7 @@
  *
  * @version: 1.0.1
  * @author: Nicholas McCready
- * @date: Fri Jul 25 2014 16:31:18 GMT-0400 (EDT)
+ * @date: Sat Jul 26 2014 09:50:11 GMT-0400 (EDT)
  * @license: MIT
  */
 isNode =
@@ -78,7 +78,7 @@ namespace = function(names, fn) {
     names = names.split('.');
   }
   space = this[_name = names.shift()] || (this[_name] = {});
-  space.namespace || (space.namespace = this.namespace);
+  space.namespace || (space.namespace = namespace);
   if (names.length) {
     return space.namespace(names, fn);
   } else {
@@ -89,7 +89,8 @@ namespace = function(names, fn) {
 if (isNode) {
   module.exports = {
     namespace: namespace,
-    BaseObject: BaseObject
+    BaseObject: BaseObject,
+    getGlobal: getGlobal
   };
 } else {
   _global = getGlobal();

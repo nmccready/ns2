@@ -17,7 +17,7 @@ namespace = function(names, fn) {
     names = names.split('.');
   }
   space = this[_name = names.shift()] || (this[_name] = {});
-  space.namespace || (space.namespace = this.namespace);
+  space.namespace || (space.namespace = namespace);
   if (names.length) {
     return space.namespace(names, fn);
   } else {
@@ -28,7 +28,8 @@ namespace = function(names, fn) {
 if (isNode) {
   module.exports = {
     namespace: namespace,
-    BaseObject: BaseObject
+    BaseObject: BaseObject,
+    getGlobal: getGlobal
   };
 } else {
   _global = getGlobal();

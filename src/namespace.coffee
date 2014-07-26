@@ -8,7 +8,7 @@
 namespace = (names, fn = ()->) ->
   names = names.split '.' if typeof names is 'string'
   space = @[names.shift()] ||= {}
-  space.namespace ||= @namespace
+  space.namespace ||= namespace
   if names.length
     space.namespace names, fn
   else
@@ -18,6 +18,7 @@ if isNode
   module.exports =
     namespace: namespace
     BaseObject: BaseObject
+    getGlobal: getGlobal
 else
   _global = getGlobal()
   _global.namespace = namespace
