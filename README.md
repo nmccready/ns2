@@ -3,7 +3,7 @@ ns2
 
 [![Dependencies](https://david-dm.org/nmccready/ns2.png)](https://david-dm.org/nmccready/ns2)&nbsp;
 [![Dependencies](https://david-dm.org/nmccready/ns2.png)](https://david-dm.org/nmccready/ns2)&nbsp;
-[![Build Status](https://travis-ci.org/nmccready/ns2.png?branch=r1-dev)](https://travis-ci.org/nmccready/ns2)
+[![Build Status](https://travis-ci.org/nmccready/ns2.png?branch=master)](https://travis-ci.org/nmccready/ns2)
 
 
 Project includes:
