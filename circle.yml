@@ -3,7 +3,7 @@ machine:
     version: v0.10.29
 dependencies:
   override:
-    - npm install -g gulp coffeegulp
+    - npm install -g gulp coffeegulp bower
   post:
-    - bower install
     - npm install
+    - bower install
