@@ -1,12 +1,12 @@
 {
   "name": "ns2",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/nmccready/ns2",
   "authors": [
     "Nick McCready <nmccready@gmail.com>"
   ],
   "description": "simple namespacing w/ ruby(like) @extend and @include for CoffeeScript (useful for JS too!)",
-  "main": "'dist/ns2.js'",
+  "main": "dist/ns2.js'",
   "test": "karma start",
   "moduleType": [
     "globals",

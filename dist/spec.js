@@ -1,9 +1,9 @@
 /**
  *  ns2
  *
- * @version: 1.0.1
+ * @version: 1.0.2
  * @author: Nicholas McCready
- * @date: Sat Jul 26 2014 09:50:11 GMT-0400 (EDT)
+ * @date: Mon Sep 08 2014 14:03:56 GMT-0400 (EDT)
  * @license: MIT
  */
 isNode =

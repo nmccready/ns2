@@ -1,6 +1,6 @@
 {
   "name": "ns2",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "simple namespacing w/ ruby(like) @extend and @include for CoffeeScript (useful for JS too!)",
   "main": "./dist/ns2.js",
   "scripts": {
